@@ -19,7 +19,7 @@ console.log(process.env.SECRET)
 mongoose.connect("mongodb://localhost/bookstore",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => console.log(err ? err : "Connected to database")
-)
+); 
 
 
 var indexRouter = require('./routes/index');
