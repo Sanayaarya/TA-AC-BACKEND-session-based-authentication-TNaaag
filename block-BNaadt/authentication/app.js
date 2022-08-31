@@ -5,9 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session');
-
-var router = express.router
-router.get('/register', (req, res, next) => {})
+var MongoStore = require("connect-mongo")(session);
+var flash = require('connect-flash')
+// var router = express.router
+// router.get('/register', (req, res, next) => {})
 
 
 var MongoStore = require('connect-mongo')(session);
@@ -18,7 +19,7 @@ console.log(process.env.SECRET)
 mongoose.connect("mongodb://localhost/bookstore",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => console.log(err ? err : "Connected to database")
-);
+)
 
 
 var indexRouter = require('./routes/index');
