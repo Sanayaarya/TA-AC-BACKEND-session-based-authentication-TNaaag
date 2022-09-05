@@ -13,7 +13,7 @@ mongoose.connect("mongodb://localhost/bookstore",
   (err) => console.log(err ? err : "Connected to database")
 );
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users');
 
 var app = express();
